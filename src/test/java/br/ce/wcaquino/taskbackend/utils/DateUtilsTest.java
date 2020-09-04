@@ -14,14 +14,14 @@ public class DateUtilsTest {
     }
 
     @Test
-    public void deveRetornarTrueParaDatasPassadas() {
+    public void deveRetornarFalseParaDatasPassadas() {
         LocalDate date = LocalDate.of(2010, 01, 01);
-        Assert.assertTrue(DateUtils.isEqualOrFutureDate(date));        
+        Assert.assertFalse(DateUtils.isEqualOrFutureDate(date));        
     }
 
     @Test
     public void deveRetornarTrueParaDataAtual() {
-        LocalDate date = LocalDate.of(LocalDate.now());
+        LocalDate date = LocalDate.now();
         Assert.assertTrue(DateUtils.isEqualOrFutureDate(date));        
     }
 }
